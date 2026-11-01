@@ -20,13 +20,13 @@ existing catalog. Export it to a fresh directory; do not modify a source cache:
 ```sh
 mkdir -p build/jazz-source
 git -C /path/to/openjazz-cache archive a1626f4edd4a7af72c54103021790c56d8ecfced | tar -x -C build/jazz-source
-for patch in ports/openjazz/patches/*.patch; do
+for patch in patches/*.patch; do
     git apply --directory=build/jazz-source "$patch"
 done
-cmake -S ports/openjazz/validation -B build/jazz-assets-host \
+cmake -S validation -B build/jazz-assets-host \
     -DOPENJAZZ_SOURCE="$PWD/build/jazz-source" -DCMAKE_BUILD_TYPE=Release
 cmake --build build/jazz-assets-host --target OpenJazz -j2
-python3 ports/openjazz/validation/run_assets.py \
+python3 validation/run_assets.py \
     --probe build/jazz-assets-host/engine/OpenJazz \
     --data /path/to/original-jazz-data --out build/jazz-assets-results
 ```

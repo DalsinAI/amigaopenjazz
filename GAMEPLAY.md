@@ -6,7 +6,7 @@ not the separate asset-loader probe. The registered data remains external.
 ## Offline clean build
 
 ```sh
-python3 ports/openjazz/build_open3.py \
+python3 build_open3.py \
   --source /path/to/local/openjazz-git-cache \
   --stove /path/to/verified-open3-stove \
   --out build/jazz-gameplay-a --jobs 2

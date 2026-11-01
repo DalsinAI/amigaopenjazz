@@ -1,0 +1,19 @@
+{
+  "schema": 1,
+  "policy": "Bundle data when redistribution is clearly licensed. Otherwise fetch public/freeware/shareware/demo data from the recorded upstream/public source and stage it locally without committing it to source control.",
+  "datasets": {
+    "jazz-shareware-1.1": {
+      "games": [
+        "openjazz"
+      ],
+      "filename": "jazz-shareware-1.1.zip",
+      "urls": [
+        "https://www.dosgamesarchive.com/file.php?id=2031"
+      ],
+      "sha256": null,
+      "availability": "shareware-public-download",
+      "packaging": "fetch-on-demand",
+      "notes": "Shareware episode only. Never substitute or bundle registered/full Jazz Jackrabbit data."
+    }
+  }
+}

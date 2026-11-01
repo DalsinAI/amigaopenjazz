@@ -1,6 +1,6 @@
 #!/bin/sh
 set -eu
-HERE=$(CDPATH= cd -- "$(dirname -- "$0")" && pwd); ROOT=$(CDPATH= cd -- "$HERE/../.." && pwd)
+HERE=$(CDPATH= cd -- "$(dirname -- "$0")" && pwd); ROOT=$HERE
 SRC=${1:-"$ROOT/build/game-ports/sources/openjazz"}; OUT=${2:-"$ROOT/build/os3/openjazz"}
 STOVE=${STOVE:-"$HOME/AmigaChrome/stoves/os32-gcc16"}; SYS="$STOVE/prefix/m68k-amigaos"; PATCH="$HERE/patches/0001-amigaos3-opengpu.patch"
 for PATCH in "$HERE"/patches/*.patch; do

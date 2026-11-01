@@ -1,0 +1,21 @@
+{
+  "schema": 1,
+  "ports": {
+    "openjazz": {
+      "order": 4,
+      "title": "OpenJazz",
+      "source": {
+        "kind": "git",
+        "url": "https://github.com/AlisterT/openjazz.git",
+        "commit": "a1626f4edd4a7af72c54103021790c56d8ecfced",
+        "submodules": false
+      },
+      "contentPolicy": "Preserve upstream notices. Jazz Jackrabbit data is external.",
+      "runtimeData": {
+        "mode": "auto-fetch-shareware",
+        "dataset": "jazz-shareware-1.1",
+        "manifest": "gameports/runtime-data.json"
+      }
+    }
+  }
+}
