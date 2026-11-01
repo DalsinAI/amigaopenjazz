@@ -50,10 +50,11 @@ def fetch_one(name: str, spec: dict, cache: Path, allow_network: bool) -> dict:
     cache.mkdir(parents=True, exist_ok=True)
     dest = cache / spec["filename"]
     expected = spec.get("sha256")
+    size = spec.get("size")
 
     if dest.is_file():
         actual = sha256(dest)
-        if expected and actual.lower() != expected.lower():
+        if (expected and actual.lower() != expected.lower()) or (size is not None and dest.stat().st_size != size):
             dest.unlink()
         else:
             return {
@@ -83,6 +84,10 @@ def fetch_one(name: str, spec: dict, cache: Path, allow_network: bool) -> dict:
             with urllib.request.urlopen(req, timeout=120) as src, tmp.open("wb") as out:
                 shutil.copyfileobj(src, out)
             actual = sha256(tmp)
+            if size is not None and tmp.stat().st_size != size:
+                errors.append(f"{url}: size {tmp.stat().st_size}, expected {size}")
+                tmp.unlink(missing_ok=True)
+                continue
             if expected and actual.lower() != expected.lower():
                 errors.append(f"{url}: checksum mismatch {actual}")
                 tmp.unlink(missing_ok=True)
