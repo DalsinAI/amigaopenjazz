@@ -10,10 +10,11 @@
       "urls": [
         "https://www.dosgamesarchive.com/file.php?id=2031"
       ],
-      "sha256": null,
+      "sha256": "ed025415c0bc5ebc3a41e7a070551bdfdfb0b65b5314241152d8bd31f87c22da",
+      "size": 1421049,
       "availability": "shareware-public-download",
       "packaging": "fetch-on-demand",
-      "notes": "Shareware episode only. Never substitute or bundle registered/full Jazz Jackrabbit data."
+      "notes": "Shareware episode only (version 1.1, FILE_ID.DIZ; three levels). Never substitute or bundle registered/full Jazz Jackrabbit data. Pinned to the file that URL served on 1 November 2026 (it redirects to image.dosgamesarchive.com/games/jazz.zip): 1,421,049 bytes, 78 entries, CRCs good; observed, not a publisher signature. A different file there fails the fetch until it is checked and pinned again."
     }
   }
 }
