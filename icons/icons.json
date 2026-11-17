@@ -1,0 +1,10 @@
+{
+  "about": "The Workbench icons of the OpenJazz drawer: python3 AMICRADLE/scripts/ports/port_icons.py icons/icons.json --out icons (DalsinAI/amicradle). The art is the engine's own program icon (upstream res/unix/OpenJazz.png at a1626f4, GPL-2.0-or-later with the engine).",
+  "drawer": {"name": "OpenJazz", "file": "OpenJazz-drawer.info"},
+  "badge": "art/openjazz.png",
+  "icons": [
+    {"file": "OpenJazz.info", "kind": "tool"},
+    {"file": "ReadMe.info", "kind": "readme"},
+    {"file": "COPYING.info", "kind": "readme"}
+  ]
+}

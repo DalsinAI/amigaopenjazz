@@ -1,0 +1,39 @@
+OpenJazz for AmigaOS 3.x (AmiCradle)
+====================================
+
+OpenJazz is AJ Thomson's and Carsten Teibes's open-source engine for Jazz
+Jackrabbit (Epic MegaGames, 1994). This drawer holds the engine built for a
+68040 or 68060 with an FPU. Status: TESTING, not a release.
+
+Requirements
+------------
+
+- AmigaOS 3.2, a 68040 or 68060 with an FPU, an RTG board.
+- GFOpenGPU's SDL2.module in LIBS:GFOpenGPU/, and AHI for sound.
+- Jazz Jackrabbit's data: the shareware episode or your own full game.
+  It is not part of this archive.
+
+Installing
+----------
+
+Unpack the archive anywhere and double-click Install-OpenJazz: it checks
+the CPU, the FPU and SDL2.module, asks where the game goes (Work:Games by
+default) and copies the OpenJazz drawer there. Then copy the Jazz
+Jackrabbit data files into the OpenJazz drawer, beside the program. The
+settings (openjazz.cfg) are written there too; installing again over it
+keeps them and your data files.
+
+Playing
+-------
+
+Double-click OpenJazz. The arrow keys move, Space jumps, Left Alt fires, Enter
+chooses in the menus and Escape goes back.
+
+Licence
+-------
+
+OpenJazz is GPL-2.0-or-later (COPYING); the source is at
+https://github.com/AlisterT/openjazz and the port at
+https://github.com/DalsinAI/amigaopenjazz. Jazz Jackrabbit and its data
+belong to Epic Games. The icons are drawn for this build from the engine's
+own icon.
