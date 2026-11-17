@@ -40,6 +40,20 @@ check that can reject a valid current directory.
 OpenJazz requires Jazz Jackrabbit game data. That data is external and is not
 committed to this repository.
 
+## Installing
+
+`package/build-amiga.sh` (Cradle's `package` target, with `STOVE` and `OUT`)
+builds the engine as `build-amigaos3.sh` does and packs
+`OpenJazz-VERSION-68040.lha`: the OpenJazz drawer (the engine, `ReadMe`
+and the GPL text, with GlowIcons from `icons/`), its icon, and
+`Install-OpenJazz`. Unpack it anywhere and double-click Install-OpenJazz:
+it checks the CPU, the FPU and SDL2.module, asks where the game goes
+(Work:Games by default) and copies the drawer there. The player then copies
+the Jazz Jackrabbit data into the drawer; installing again over it keeps
+that data and `openjazz.cfg`. `package/installer.json` is its spec
+(DalsinAI/amicradle's `scripts/ports/port_installer.py` writes the script
+and its icon).
+
 ## Release gate
 
 Title/menu → enter an authorised test level → scrolling/rendering →
